@@ -15,6 +15,8 @@ import (
 )
 
 // Los tags `json:"nombre"` mapean campos Go a nombres JSON personalizados
+
+// Estructura para el índice
 type Index struct {
 	Dir       string      `json:"dir"`
 	Generated time.Time   `json:"generated"`
@@ -22,6 +24,7 @@ type Index struct {
 	Items     []IndexItem `json:"items"`
 }
 
+// Estructura para un ítem del índice
 type IndexItem struct {
 	Path     string    `json:"path"`
 	Size     int64     `json:"size"`
@@ -126,7 +129,6 @@ func main() {
 	fmt.Println("OK →", *out, "items:", len(items))
 }
 
-// ---------- Summarizers ----------
 
 type NoopSummarizer struct{}
 
@@ -183,7 +185,6 @@ func (c *OpenAICompat) Summarize(ctx context.Context, model, filename, preview s
 	return parseJSON(out.Choices[0].Message.Content)
 }
 
-// Ollama local
 
 type OllamaSummarizer struct{ Base string }
 
@@ -213,7 +214,6 @@ func (o *OllamaSummarizer) Summarize(ctx context.Context, model, filename, previ
 	return parseJSON(out.Response)
 }
 
-// ---------- Helpers ----------
 
 func prompt(filename, preview string) string {
 	if len(preview) > 6000 {
@@ -234,6 +234,8 @@ func parseJSON(s string) (string, []string, error) {
 			s = s[i : j+1]
 		}
 	}
+
+	// Unmarshal el JSON en una estructura temporal
 	var tmp struct {
 		Summary  string   `json:"summary"`
 		Keywords []string `json:"keywords"`
@@ -243,6 +245,7 @@ func parseJSON(s string) (string, []string, error) {
 	}
 	return tmp.Summary, tmp.Keywords, nil
 }
+
 
 func toSet(csv string) map[string]bool {
 	m := map[string]bool{}
@@ -259,6 +262,7 @@ func toSet(csv string) map[string]bool {
 	return m
 }
 
+// Utilidad para obtener variables de entorno
 func env(k, def string) string {
 	v := os.Getenv(k)
 	if v == "" {
@@ -267,6 +271,7 @@ func env(k, def string) string {
 	return v
 }
 
+// Escribe un JSON en un archivo temporal y lo renombra
 func writeJSON(path string, v any) error {
 	tmp := path + ".tmp"
 	f, err := os.Create(tmp)
