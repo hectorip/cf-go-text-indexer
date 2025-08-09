@@ -14,6 +14,7 @@ import (
 	"time"
 )
 
+// Los tags `json:"nombre"` mapean campos Go a nombres JSON personalizados
 type Index struct {
 	Dir       string      `json:"dir"`
 	Generated time.Time   `json:"generated"`
@@ -183,6 +184,7 @@ func (c *OpenAICompat) Summarize(ctx context.Context, model, filename, preview s
 }
 
 // Ollama local
+
 type OllamaSummarizer struct{ Base string }
 
 func (o *OllamaSummarizer) Summarize(ctx context.Context, model, filename, preview string) (string, []string, error) {
