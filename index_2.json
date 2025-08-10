@@ -1,0 +1,130 @@
+{
+  "dir": "/Users/hectorip/Development/go/text-indexer",
+  "generated": "2025-08-08T22:40:04.928318-06:00",
+  "model": "gpt-4o-mini",
+  "items": [
+    {
+      "path": "README.md",
+      "size": 1201,
+      "mod_time": "2025-08-08T20:40:40.613477158-06:00",
+      "summary": "El proyecto 'text-indexer' permite indexar archivos de texto en un directorio, generando un archivo `index.json` que incluye resúmenes y palabras clave por archivo, así como información sobre tamaño y fecha de modificación. Se puede utilizar con APIs de OpenAI o de manera local con Ollama, y ofrece opciones para personalizar la indexación.",
+      "keywords": [
+        "text-indexer",
+        "indexar",
+        "archivos",
+        "json",
+        "openai",
+        "ollama",
+        "resumen",
+        "palabras clave",
+        "go",
+        "programación"
+      ]
+    },
+    {
+      "path": "index.json",
+      "size": 3767,
+      "mod_time": "2025-08-08T21:29:54.261117583-06:00",
+      "summary": "El archivo index.json detalla el proyecto text-indexer, que permite la indexación de archivos de texto y la creación de un archivo JSON con resúmenes y palabras clave. Incluye información sobre requisitos y estructura del código en Go, facilitando la comprensión de su funcionamiento.",
+      "keywords": [
+        "text-indexer",
+        "archivos",
+        "json",
+        "resumen",
+        "palabras clave",
+        "go",
+        "proyecto",
+        "indexar",
+        "texto",
+        "slog"
+      ]
+    },
+    {
+      "path": "index_2.json",
+      "size": 3529,
+      "mod_time": "2025-08-08T21:30:38.550209877-06:00",
+      "summary": "El proyecto 'text-indexer' permite la indexación de archivos de texto, generando un archivo JSON con resúmenes y palabras clave, así como información sobre cada archivo. Incluye implementaciones en Go y opciones de personalización, facilitando su uso con APIs de OpenAI o de manera local.",
+      "keywords": [
+        "text-indexer",
+        "indexar",
+        "archivos",
+        "json",
+        "go",
+        "resumen",
+        "palabras clave",
+        "api",
+        "programa",
+        "sistema operativo"
+      ]
+    },
+    {
+      "path": "main.go",
+      "size": 7546,
+      "mod_time": "2025-08-08T22:39:21.839204514-06:00",
+      "summary": "El archivo main.go implementa un programa en Go que indexa archivos de un directorio especificado, generando un índice en formato JSON. Utiliza un modelo de lenguaje para resumir el contenido de los archivos y extraer palabras clave, permitiendo configuraciones como el tamaño máximo de lectura y el tipo de archivos a incluir.",
+      "keywords": [
+        "go",
+        "programa",
+        "indexar",
+        "json",
+        "resumir",
+        "archivos",
+        "modelo",
+        "lenguaje",
+        "palabras clave",
+        "directorio"
+      ]
+    },
+    {
+      "path": "sample/ideas.md",
+      "size": 77,
+      "mod_time": "2025-08-08T20:57:14-06:00",
+      "summary": "El documento presenta ideas para un proyecto que incluye la migración de una API a Go, la implementación de logs utilizando la biblioteca slog y la exploración de embeddings como una posible dirección futura. Estas propuestas buscan mejorar la eficiencia y la funcionalidad del sistema actual.",
+      "keywords": [
+        "proyecto a",
+        "migrar api",
+        "go",
+        "logs",
+        "slog",
+        "embeddings",
+        "futuro"
+      ]
+    },
+    {
+      "path": "sistema_operativo_explicacion.md",
+      "size": 4617,
+      "mod_time": "2025-08-08T21:39:36.161608151-06:00",
+      "summary": "El documento detalla el uso de bibliotecas del sistema operativo en un código Go, explicando cómo se manejan variables de entorno, rutas de archivos y operaciones de lectura, así como la comunicación de red HTTP. Se enfatiza el acceso directo a funciones del sistema operativo para realizar tareas como la creación, renombrado y lectura de archivos.",
+      "keywords": [
+        "sistema operativo",
+        "go",
+        "bibliotecas",
+        "variables de entorno",
+        "rutas de archivos",
+        "lectura de archivos",
+        "comunicación de red",
+        "http",
+        "funciones del sistema",
+        "metadatos"
+      ]
+    },
+    {
+      "path": "tags_go_explicacion.md",
+      "size": 7455,
+      "mod_time": "2025-08-08T22:32:25.555913219-06:00",
+      "summary": "Los tags en Go son metadatos que se asocian a los campos de estructuras, permitiendo personalizar su representación en formatos como JSON, XML y YAML. Estos tags pueden incluir opciones como 'omitempty' para omitir campos vacíos y validaciones para asegurar la integridad de los datos.",
+      "keywords": [
+        "tags",
+        "go",
+        "json",
+        "estructuras",
+        "metadatos",
+        "validación",
+        "serialización",
+        "xml",
+        "yaml",
+        "gorm"
+      ]
+    }
+  ]
+}
